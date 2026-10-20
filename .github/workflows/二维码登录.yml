@@ -117,7 +117,7 @@ jobs:
       # ═══ 备用：HTML 仍上传为 artifact（万一 Release 失败兜底）═══
       - name: 上传二维码 HTML 页面（兜底备份）
         if: ${{ always() && steps.gen.outcome == 'success' && steps.publish.outcome != 'success' }}
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: 二维码HTML
           path: |
